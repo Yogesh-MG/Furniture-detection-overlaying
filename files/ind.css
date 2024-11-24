@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Form Styling */
+.upload-container {
+    text-align: center;
+    margin: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container h2 {
+    margin-bottom: 20px;
+}
+
+.upload-container form {
+    display: inline-block;
+    text-align: left;
+}
+
+.upload-container button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.upload-container button:hover {
+    background-color: #218838;
+}
+
+/* Image Display Styles */
+.image-container {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+
+.arr {
+    padding-top: 200px;
+}
+
+.image-box {
+    background-color: #28a745;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.ori-img {
+    width: 400px;
+}
+.image-box img {
+    width: 400px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

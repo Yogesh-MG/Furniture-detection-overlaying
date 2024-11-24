@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Segmentation</title>
+    <link rel="stylesheet" href="{% static 'ind.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Image Segmentation with YOLOv8</h1>
+    </header>
+
+    <main>
+        <div class="upload-container">
+            <h2>Upload Image and Choose Color for Segmentation Mask</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Upload & Segment</button>
+            </form>
+        </div>
+
+        {% if uploaded_image_url %}
+        <div class="image-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="ori-img">
+            </div>
+            <div class="arr">
+                <img src="{% static "arrow.gif" %}">
+            </div>
+
+            <div class="image-box">
+                <h3>Predicted Image</h3>
+                <img src="{{ result_image_url }}" alt="Predicted Image">
+            </div>
+        </div>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 YOLOv8 Image Segmentation Demo</p>
+    </footer>
+</body>
+</html>
+
+<script src="{% static "style.js" %}">
+</html>
